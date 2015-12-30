@@ -53,21 +53,13 @@ public abstract class BasePageImpl implements WebPage {
 		pageInitialized = false;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#initPage(java.lang.String, java.lang.String)
-	 */
+
 	public void initPage(String pageDomain, String pageClassName) {
 		// add the page domain and class name to the load queue
 		mapQueue.add(new String[] { pageDomain, pageClassName });
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#initPage(java.lang.String, java.lang.String, java.lang.String)
-	 */
+
 	public void initPage(String pageDomain, String pageClassName, String siteLocale) {
 		site = siteLocale;
 		initPage(pageDomain, pageClassName);
