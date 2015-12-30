@@ -3,7 +3,7 @@ package com.ad.test.shiansi.platform.html;
 /**
  * This class is the web element Button wrapper for handling infrastructure testing technology.
  * <p>
- * In this class, the method 'click' is encapsulated and invoke bluefin session to do the click against the specified
+ * In this class, the method 'click' is encapsulated and invoke shiansi session to do the click against the specified
  * element.
  * </p>
  * 
