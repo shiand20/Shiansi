@@ -132,11 +132,7 @@ public abstract class BasePageImpl implements WebPage {
 		pageInitialized = true;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#getExpectedPageTitle()
-	 */
+
 	public String getExpectedPageTitle() {
 		return getPage().pageTitle;
 	}
@@ -154,31 +150,18 @@ public abstract class BasePageImpl implements WebPage {
 		return pageTitles.contains(actualPageTitle);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#isInitialized()
-	 */
+
 	public boolean isInitialized() {
 		return pageInitialized;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#getSiteLocale()
-	 */
+
 	public String getSiteLocale() {
 		return site;
 	}
 
 	
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.paypal.test.bluefin.platform.html.WebPage#waitForPage()
-	 */
-	//TODO: Revisit this logic. We should try reconstructing this method using ExpectedCondition
+
 	public void waitForPage(RemoteWebDriver driver) {
 		Driver.waitUntilPageTitlePresent(getExpectedPageTitle(), driver);
 		validatePage();
